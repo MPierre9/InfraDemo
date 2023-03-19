@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Infra Diagram | Secure Access</title>
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      background-color: #0C0D12;
+      font-family: 'Segoe UI', sans-serif;
+      color: #FFF;
+      line-height: 1.5;
+    }
+
+    /* Header styles */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #5E5E5E;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    /* Main content styles */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+      padding: 2rem;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="password"] {
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      background-color: #2E2E2E;
+      color: #FFF;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    input[type="submit"] {
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      background-color: #5E5E5E;
+      color: #FFF;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4A4A4A;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Secure Access | Infra Diagram</h1>
+    <img src="/logo.jpeg" alt="Guerilla Games logo" width="50" height="50">
+  </header>
+  <main>
+    <h1>Welcome to Infra Diagram</h1>
+    <p>Please enter the password to access the infrastructure diagram:</p>
+    <form method="get" action="/infra-diagram">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+</html>
