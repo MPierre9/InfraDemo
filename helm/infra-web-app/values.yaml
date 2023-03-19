@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerilla-web-app
+  repository: 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "guerilla-web-app"
