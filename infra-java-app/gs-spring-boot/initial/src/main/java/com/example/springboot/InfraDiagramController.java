@@ -17,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.apache.commons.io.IOUtils;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 @RequestMapping("/")
@@ -27,7 +28,6 @@ public class InfraDiagramController {
 
     @GetMapping("/")
     public String index() {
-        System.out.println("index");
         return "index";
     }
 

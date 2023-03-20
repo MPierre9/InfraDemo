@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @Configuration
-@SpringBootApplication
 @ComponentScan(basePackages = "com.example.springboot")
 public class MvcConfig implements WebMvcConfigurer {
     @Override
