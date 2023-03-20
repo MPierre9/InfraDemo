@@ -20,7 +20,7 @@ ingress:
     - host: mpierre.ca
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
 
 replicaCount: 1
 
