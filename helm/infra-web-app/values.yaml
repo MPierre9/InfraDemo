@@ -5,6 +5,7 @@ image:
 service:
   name: guerilla-web-app
   type: LoadBalancer
+  port: 443
 
 ingress:
   enabled: true
