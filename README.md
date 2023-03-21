@@ -1,7 +1,7 @@
 # Summary 👋
 This repo was mainly to meant to be a fun project to ramp up on some technologies I used extensively previously (mainly Kubernetes, Helm, Terraform). The muscle memory is coming back as I build this out haha.
 
-Below is some components that make up this project.
+Below is some components that make up this project. (The project is hosted on my personal domain: https://mpierre.ca/)
 
 **Note:** due to time a couldn't create exactly everthing I wanted, but will continue to build this out more extensively (have some ideas besides the infra diagram hosting). The first thing I'll likely add after is CI/CD, want to try using Jenkins and contrast that with Github actions (I've heard good things of both but mainly used Gitlab CI and Amazons internal CI/CD tools). There's a lot of commits as well because I'm using a bastion host to run kubectl and helm commands that pulls this repo.
 
