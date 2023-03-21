@@ -1,10 +1,10 @@
 image:
   repository: 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre
-  tag: "guerilla-web-app"
+  tag: "guerrilla-web-app"
   pullPolicy: Always
 
 service:
-  name: guerilla-web-app
+  name: guerrilla-web-app
   type: LoadBalancer
   port: 443
 

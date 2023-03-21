@@ -1,4 +1,4 @@
-com/example/springboot/MvcConfig.class
 com/example/springboot/ErrorController.class
-com/example/springboot/Application.class
 com/example/springboot/InfraDiagramController.class
+com/example/springboot/MvcConfig.class
+com/example/springboot/Application.class

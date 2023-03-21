@@ -33,17 +33,17 @@ aws eks --region us-east-1 update-kubeconfig --name game-infra
 # mvn package (creates the jar file)
 
 # build image
-docker build -t guerilla-web-app .
+docker build -t guerrilla-web-app .
 
 # Log in to the container registry
 # Example: Amazon ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre
 
 # Tag the image
-docker tag guerilla-web-app 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerilla-web-app
+docker tag guerrilla-web-app 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerrilla-web-app
 
 # Push the image
-docker push 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerilla-web-app
+docker push 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerrilla-web-app
 
 # Helm install
 helm install infra-web-app .
@@ -61,7 +61,5 @@ k logs infra-web-app-6748c547b7-hqdpp infra-web-app
 k delete pod infra-web-app-6748c547b7-hqdpp
 
 # local testing
-docker run -itd -p 8080:8080 --name guerilla-web-app guerilla-web-app
-
-
+docker run -itd -p 8080:8080 --name guerrilla-web-app guerrilla-web-app
 ```

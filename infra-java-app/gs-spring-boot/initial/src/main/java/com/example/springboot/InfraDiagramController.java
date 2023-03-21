@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class InfraDiagramController {
 
-    private static final String PASSWORD = "guerilla-games";
+    private static final String PASSWORD = "guerrilla-games";
     private boolean isPasswordEntered = false;
 
     @GetMapping("/")
