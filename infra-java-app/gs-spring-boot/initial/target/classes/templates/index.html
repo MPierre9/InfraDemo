@@ -13,18 +13,20 @@
 
     /* Body styles */
     body {
-      background-color: #0C0D12;
+      background-image: url('/horizon2.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       font-family: 'Segoe UI', sans-serif;
       color: #FFF;
       line-height: 1.5;
     }
 
-    /* Header styles */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #5E5E5E;
+      background-color: rgba(94, 94, 94, 0.8); 
       padding: 1rem;
     }
 
@@ -41,6 +43,19 @@
       min-height: calc(100vh - 80px);
       padding: 2rem;
       flex-direction: column;
+      position: relative;
+    }
+
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+      border-radius: 15px;
+      z-index: -1;
     }
 
     p {
@@ -79,7 +94,20 @@
     input[type="submit"]:hover {
       background-color: #4A4A4A;
     }
-  </style>
+    .disclaimer {
+      margin-top: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .disclaimer-title {
+      cursor: pointer;
+    }
+
+    .disclaimer-title:hover + .disclaimer-text {
+      opacity: 1;
+    }
+</style>
 </head>
 <body>
   <header>
@@ -93,6 +121,15 @@
       <input type="password" name="password" placeholder="Password">
       <input type="submit" value="Submit">
     </form>
+    <div class="disclaimer" style="padding-top: 40px;">
+      <h2 class="disclaimer-title">Disclaimer (just in case 😬)</h4>
+      <p >
+         This website and its contents are in no way affiliated with Guerilla games or any of its products.
+         This project is explicitly for learning and fun, and the contents of this website are solely the opinions and expressions of the website's creator. 
+         The website's creator do not make any representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.
+         Any reliance you place on such information is therefore strictly at your own risk.
+      </p>
+    </div>
   </main>
 </body>
 </html>

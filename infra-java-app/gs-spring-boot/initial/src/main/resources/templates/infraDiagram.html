@@ -12,8 +12,12 @@
     }
 
     /* Body styles */
-    body {
-      background-color: #0C0D12;
+     /* Body styles */
+     body {
+      background-image: url('/horizon2.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       font-family: 'Segoe UI', sans-serif;
       color: #FFF;
       line-height: 1.5;
@@ -28,9 +32,29 @@
       padding: 1rem;
     }
 
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(94, 94, 94, 0.8); 
+      padding: 1rem;
+    }
+
     h1 {
       font-size: 2rem;
       margin: 0;
+    }
+
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+      border-radius: 15px;
+      z-index: -1;
     }
 
     /* Main content styles */
@@ -40,6 +64,8 @@
       align-items: center;
       min-height: calc(100vh - 80px);
       padding: 2rem;
+      flex-direction: column;
+      position: relative;
     }
 
     img {
