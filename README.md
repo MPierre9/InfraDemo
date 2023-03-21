@@ -3,7 +3,7 @@ This repo was mainly to meant to be a fun project to ramp up on some technologie
 
 Below is some components that make up this project.
 
-**Note:** due to time a couldn't create exactly everthing I wanted, but will continue to build this out more extensively (have some ideas besides the infra diagram hosting). The first thing I'll likely add after is CI/CD, want to try using Jenkins and contrast that with Github actions (I've heard good things of both but mainly used Gitlab CI and Amazons internal CI/CD tools).
+**Note:** due to time a couldn't create exactly everthing I wanted, but will continue to build this out more extensively (have some ideas besides the infra diagram hosting). The first thing I'll likely add after is CI/CD, want to try using Jenkins and contrast that with Github actions (I've heard good things of both but mainly used Gitlab CI and Amazons internal CI/CD tools). There's a lot of commits as well because I'm using a bastion host to run kubectl and helm commands that pulls this repo.
 
 # Components
 
@@ -20,3 +20,48 @@ A super simple helm template is used to deploy the java spring app in k8s. That 
 
 ## Terraform
 Contains the IaC to deploy the tiny EKS cluster that the java spring app runs in.
+
+
+# Random Command List Used
+```
+# Created kube config
+aws eks --region us-east-1 update-kubeconfig --name game-infra
+
+# Run Spring app (/gs-spring-boot/initial)
+./mvnw spring-boot:run
+
+# mvn package (creates the jar file)
+
+# build image
+docker build -t guerilla-web-app .
+
+# Log in to the container registry
+# Example: Amazon ECR
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre
+
+# Tag the image
+docker tag guerilla-web-app 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerilla-web-app
+
+# Push the image
+docker push 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre:guerilla-web-app
+
+# Helm install
+helm install infra-web-app .
+
+# Helm upgrade
+helm upgrade infra-web-app .
+
+# Get kube pod details 
+k describe pods infra-web-app-6748c547b7-hqdpp
+
+# get container logs in pod
+k logs infra-web-app-6748c547b7-hqdpp infra-web-app
+
+# delete pod 
+k delete pod infra-web-app-6748c547b7-hqdpp
+
+# local testing
+docker run -itd -p 8080:8080 --name guerilla-web-app guerilla-web-app
+
+
+```
