@@ -1,6 +1,7 @@
 image:
   repository: 821777302053.dkr.ecr.us-east-1.amazonaws.com/mpierre
   tag: "guerilla-web-app"
+  pullPolicy: Always
 
 service:
   name: guerilla-web-app
@@ -22,7 +23,7 @@ ingress:
         - path: /
           pathType: Prefix
 
-replicaCount: 0
+replicaCount: 1
 
 resources: {}
 
