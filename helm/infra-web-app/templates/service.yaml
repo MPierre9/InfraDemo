@@ -11,6 +11,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
+    - port: 80
+      name: http
+      targetPort: 8080
     - port: 443
       name: https
       targetPort: 8080
