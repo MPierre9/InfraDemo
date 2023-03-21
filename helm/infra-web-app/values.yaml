@@ -6,22 +6,10 @@ image:
 service:
   name: guerilla-web-app
   type: LoadBalancer
-  port: 443
+  port: 8080
 
 ingress:
   enabled: false
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 8080}, {"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:821777302053:certificate/f77165ee-d72c-4393-b574-5e7c1e80f339
-  path: /
-  hosts:
-    - host: mpierre.ca
-      paths:
-        - path: /
-          pathType: Prefix
 
 replicaCount: 1
 
