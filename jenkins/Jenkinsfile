@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                cd python
                 pip install -r ./python_app/requirements.txt
                 '''
             }
@@ -23,6 +22,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 pip install pytest
+                pip show pytest
                 pytest"
                 '''
             }
