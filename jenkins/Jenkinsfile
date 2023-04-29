@@ -24,6 +24,7 @@ pipeline {
                 sh '''
                 pip install pytest
                 pip show pytest
+                export PATH="/home/jenkins/.local/bin:$PATH"
                 pytest
                 '''
             }
