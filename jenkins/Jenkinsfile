@@ -24,7 +24,7 @@ pipeline {
                 sh '''
                 pip install pytest
                 pip show pytest
-                pytest"
+                pytest
                 '''
             }
         }
