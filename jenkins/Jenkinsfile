@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                python3 ./python_app/weather_app.py"
+                python3 ./python_app/weather_app.py
                 '''
             }
         }
